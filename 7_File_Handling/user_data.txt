@@ -1,0 +1,12 @@
+name: Ranjith
+email:email@gmail.com
+contact:234567
+name: Vanu
+email:email@gmail.com
+contact:123456
+name: Kairaa
+email:email@gmail.com
+contact:1234567
+name: ranjith
+email:ranj@gmail.com
+contact:21322132
