@@ -3,7 +3,8 @@ import json
 
 def write_data():
     """
-    This function writes data to a JSON file. It prompts the user to enter product information, and then appends the data to an existing JSON file or creates a new one if the file does not exist.
+    This function writes data to a JSON file. It prompts the user to enter product information, and then appends
+      the data to an existing JSON file or creates a new one if the file does not exist.
     """
     create_list = []
     while True:
