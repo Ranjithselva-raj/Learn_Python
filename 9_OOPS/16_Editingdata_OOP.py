@@ -18,7 +18,9 @@ class School:
 
     def edit_student(self, roll_number, new_name, new_age):
         for student in self.students:
-            if student.roll_number == roll_number:
+            if student.roll_number != roll_number:
+                print(f"Student with roll number {roll_number} not found")
+            else:
                 student.name = new_name
                 student.age = new_age
                 print(f"Student {student.name} data updated successfully")
