@@ -1,0 +1,57 @@
+08/31/2024 10:42:16 AM - ArithmeticApp - DEBUG - Addition function is called
+08/31/2024 10:42:16 AM - ArithmeticApp - DEBUG - Adding 10 + 15, 25
+08/31/2024 10:42:16 AM - ArithmeticApp - INFO - End of addition, returning result:25
+08/31/2024 10:42:16 AM - ArithmeticApp - DEBUG - Subtraction function is called
+08/31/2024 10:42:16 AM - ArithmeticApp - DEBUG - subtract 10 - 15, -5
+08/31/2024 10:42:16 AM - ArithmeticApp - INFO - End of subtract, returning result:-5
+08/31/2024 10:42:16 AM - ArithmeticApp - DEBUG - Multiplication function is called
+08/31/2024 10:42:16 AM - ArithmeticApp - DEBUG - multiply 10 * 15, 150
+08/31/2024 10:42:16 AM - ArithmeticApp - INFO - End of multiply, returning result:150
+08/31/2024 10:42:16 AM - ArithmeticApp - DEBUG - Division function is called
+08/31/2024 10:42:16 AM - ArithmeticApp - DEBUG - divide 10 / 15, 0.6666666666666666
+08/31/2024 10:42:16 AM - ArithmeticApp - INFO - End of divide, returning result:0.6666666666666666
+08/31/2024 10:45:27 AM - ArithmeticApp - DEBUG - Addition function is called
+08/31/2024 10:45:27 AM - ArithmeticApp - DEBUG - Adding 10 + 15, 25
+08/31/2024 10:45:27 AM - ArithmeticApp - INFO - End of addition, returning result:25
+08/31/2024 10:45:27 AM - ArithmeticApp - DEBUG - Subtraction function is called
+08/31/2024 10:45:27 AM - ArithmeticApp - DEBUG - subtract 10 - 15, -5
+08/31/2024 10:45:27 AM - ArithmeticApp - INFO - End of subtract, returning result:-5
+08/31/2024 10:45:27 AM - ArithmeticApp - DEBUG - Multiplication function is called
+08/31/2024 10:45:27 AM - ArithmeticApp - DEBUG - multiply 10 * 15, 150
+08/31/2024 10:45:27 AM - ArithmeticApp - INFO - End of multiply, returning result:150
+08/31/2024 10:45:27 AM - ArithmeticApp - DEBUG - Division function is called
+08/31/2024 10:45:27 AM - ArithmeticApp - ERROR - division by zero
+08/31/2024 10:46:28 AM - __main__ - DEBUG - Addition function is called
+08/31/2024 10:46:28 AM - __main__ - DEBUG - Adding 10 + 15, 25
+08/31/2024 10:46:28 AM - __main__ - INFO - End of addition, returning result:25
+08/31/2024 10:46:28 AM - __main__ - DEBUG - Subtraction function is called
+08/31/2024 10:46:28 AM - __main__ - DEBUG - subtract 10 - 15, -5
+08/31/2024 10:46:28 AM - __main__ - INFO - End of subtract, returning result:-5
+08/31/2024 10:46:28 AM - __main__ - DEBUG - Multiplication function is called
+08/31/2024 10:46:28 AM - __main__ - DEBUG - multiply 10 * 15, 150
+08/31/2024 10:46:28 AM - __main__ - INFO - End of multiply, returning result:150
+08/31/2024 10:46:28 AM - __main__ - DEBUG - Division function is called
+08/31/2024 10:46:28 AM - __main__ - ERROR - division by zero
+08/31/2024 10:47:29 AM - ArithmeticCalculations - DEBUG - Addition function is called
+08/31/2024 10:47:29 AM - ArithmeticCalculations - DEBUG - Adding 10 + 15, 25
+08/31/2024 10:47:29 AM - ArithmeticCalculations - INFO - End of addition, returning result:25
+08/31/2024 10:47:29 AM - ArithmeticCalculations - DEBUG - Subtraction function is called
+08/31/2024 10:47:29 AM - ArithmeticCalculations - DEBUG - subtract 10 - 15, -5
+08/31/2024 10:47:29 AM - ArithmeticCalculations - INFO - End of subtract, returning result:-5
+08/31/2024 10:47:29 AM - ArithmeticCalculations - DEBUG - Multiplication function is called
+08/31/2024 10:47:29 AM - ArithmeticCalculations - DEBUG - multiply 10 * 15, 150
+08/31/2024 10:47:29 AM - ArithmeticCalculations - INFO - End of multiply, returning result:150
+08/31/2024 10:47:29 AM - ArithmeticCalculations - DEBUG - Division function is called
+08/31/2024 10:47:29 AM - ArithmeticCalculations - DEBUG - divide 10 / 2, 5.0
+08/31/2024 10:47:29 AM - ArithmeticCalculations - INFO - End of divide, returning result:5.0
+08/31/2024 10:50:17 AM - ArithmeticCalculations - DEBUG - Addition function is called
+08/31/2024 10:50:17 AM - ArithmeticCalculations - ERROR - can only concatenate str (not "int") to str
+08/31/2024 10:50:17 AM - ArithmeticCalculations - DEBUG - Subtraction function is called
+08/31/2024 10:50:17 AM - ArithmeticCalculations - DEBUG - subtract 10 - 15, -5
+08/31/2024 10:50:17 AM - ArithmeticCalculations - INFO - End of subtract, returning result:-5
+08/31/2024 10:50:17 AM - ArithmeticCalculations - DEBUG - Multiplication function is called
+08/31/2024 10:50:17 AM - ArithmeticCalculations - DEBUG - multiply 10 * 15, 150
+08/31/2024 10:50:17 AM - ArithmeticCalculations - INFO - End of multiply, returning result:150
+08/31/2024 10:50:17 AM - ArithmeticCalculations - DEBUG - Division function is called
+08/31/2024 10:50:17 AM - ArithmeticCalculations - DEBUG - divide 10 / 2, 5.0
+08/31/2024 10:50:17 AM - ArithmeticCalculations - INFO - End of divide, returning result:5.0

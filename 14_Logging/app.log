@@ -1,0 +1,15 @@
+2024-08-31 11:07:09,600 - my_logger - DEBUG - This is a debug message
+2024-08-31 11:07:09,601 - my_logger - INFO - This is an info message
+2024-08-31 11:07:09,603 - my_logger - WARNING - This is a warning message
+2024-08-31 11:07:09,603 - my_logger - ERROR - This is an error message
+2024-08-31 11:07:09,611 - my_logger - CRITICAL - This is a critical message
+2024-08-31 11:08:44,246 - my_logger - DEBUG - This is a debug message
+2024-08-31 11:08:44,248 - my_logger - INFO - This is an info message
+2024-08-31 11:08:44,249 - my_logger - WARNING - This is a warning message
+2024-08-31 11:08:44,251 - my_logger - ERROR - This is an error message
+2024-08-31 11:08:44,253 - my_logger - CRITICAL - This is a critical message
+2024-08-31 11:13:43,035 - my_logger - DEBUG - This is a debug message
+2024-08-31 11:13:43,047 - my_logger - INFO - This is an info message
+2024-08-31 11:13:43,049 - my_logger - WARNING - This is a warning message
+2024-08-31 11:13:43,052 - my_logger - ERROR - This is an error message
+2024-08-31 11:13:43,054 - my_logger - CRITICAL - This is a critical message

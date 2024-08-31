@@ -1,0 +1,15 @@
+2024-08-31 12:45:08,852 - exception_logger - ERROR - division by zero
+Traceback (most recent call last):
+  File "C:\Users\ranje\AppData\Local\Temp\ipykernel_6744\2760876539.py", line 13, in log_exception
+    x = 1 / 0
+ZeroDivisionError: division by zero
+2024-08-31 12:46:02,673 - exception_logger - ERROR - division by zero
+Traceback (most recent call last):
+  File "C:\Users\ranje\AppData\Local\Temp\ipykernel_6744\1737116313.py", line 13, in log_exception
+    x = 1 / 0
+ZeroDivisionError: division by zero
+2024-08-31 12:46:02,673 - exception_logger - ERROR - division by zero
+Traceback (most recent call last):
+  File "C:\Users\ranje\AppData\Local\Temp\ipykernel_6744\1737116313.py", line 13, in log_exception
+    x = 1 / 0
+ZeroDivisionError: division by zero

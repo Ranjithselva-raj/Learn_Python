@@ -1,0 +1,8 @@
+08/31/2024 07:54:29 AM - DEBUG - Addition function is called
+08/31/2024 07:54:29 AM - DEBUG - Adding 10 and 15, 25
+08/31/2024 07:54:29 AM - INFO - End of addition, returning result:25
+08/31/2024 07:54:29 AM - DEBUG - Subtraction function is called
+08/31/2024 07:54:29 AM - DEBUG - Subtracting 10 and 15, -5
+08/31/2024 07:54:29 AM - INFO - End of subtraction, returning result:-5
+08/31/2024 07:54:29 AM - DEBUG - Division function is called
+08/31/2024 07:54:29 AM - ERROR - division by zero

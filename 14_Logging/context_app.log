@@ -1,0 +1,35 @@
+2024-08-31 12:57:50,914 - context_logger - DEBUG - This is a debug message - test_func - 14
+2024-08-31 12:57:50,916 - context_logger - INFO - This is an info message - test_func - 15
+2024-08-31 12:57:50,916 - context_logger - WARNING - This is a warning message - test_func - 16
+2024-08-31 12:57:50,917 - context_logger - ERROR - This is an error message - test_func - 17
+2024-08-31 12:57:50,918 - context_logger - CRITICAL - This is a critical message - test_func - 18
+2024-08-31 12:58:11,728 - context_logger - DEBUG - This is a debug message - test_func - 14
+2024-08-31 12:58:11,728 - context_logger - INFO - This is an info message - test_func - 15
+2024-08-31 12:58:11,738 - context_logger - WARNING - This is a warning message - test_func - 16
+2024-08-31 12:58:11,738 - context_logger - ERROR - This is an error message - test_func - 17
+2024-08-31 12:58:11,738 - context_logger - CRITICAL - This is a critical message - test_func - 18
+2024-08-31 13:01:34,066 - context_logger - ERROR - logger_with_context.<locals>.test_func() missing 1 required positional argument: 'num' - logger_with_context - 24
+Traceback (most recent call last):
+  File "C:\Users\ranje\AppData\Local\Temp\ipykernel_16796\679700786.py", line 22, in logger_with_context
+    test_func()
+TypeError: logger_with_context.<locals>.test_func() missing 1 required positional argument: 'num'
+2024-08-31 13:01:34,066 - context_logger - ERROR - logger_with_context.<locals>.test_func() missing 1 required positional argument: 'num' - logger_with_context - 24
+Traceback (most recent call last):
+  File "C:\Users\ranje\AppData\Local\Temp\ipykernel_16796\679700786.py", line 22, in logger_with_context
+    test_func()
+TypeError: logger_with_context.<locals>.test_func() missing 1 required positional argument: 'num'
+2024-08-31 13:02:19,909 - context_logger - DEBUG - This is a debug message - test_func - 15
+2024-08-31 13:02:19,909 - context_logger - DEBUG - This is a debug message - test_func - 15
+2024-08-31 13:02:19,909 - context_logger - DEBUG - This is a debug message - test_func - 15
+2024-08-31 13:02:19,909 - context_logger - INFO - This is an info message - test_func - 16
+2024-08-31 13:02:19,909 - context_logger - INFO - This is an info message - test_func - 16
+2024-08-31 13:02:19,909 - context_logger - INFO - This is an info message - test_func - 16
+2024-08-31 13:02:19,910 - context_logger - WARNING - This is a warning message - test_func - 17
+2024-08-31 13:02:19,910 - context_logger - WARNING - This is a warning message - test_func - 17
+2024-08-31 13:02:19,910 - context_logger - WARNING - This is a warning message - test_func - 17
+2024-08-31 13:02:19,910 - context_logger - ERROR - This is an error message - test_func - 18
+2024-08-31 13:02:19,910 - context_logger - ERROR - This is an error message - test_func - 18
+2024-08-31 13:02:19,910 - context_logger - ERROR - This is an error message - test_func - 18
+2024-08-31 13:02:19,910 - context_logger - CRITICAL - This is a critical message - test_func - 19
+2024-08-31 13:02:19,910 - context_logger - CRITICAL - This is a critical message - test_func - 19
+2024-08-31 13:02:19,910 - context_logger - CRITICAL - This is a critical message - test_func - 19
