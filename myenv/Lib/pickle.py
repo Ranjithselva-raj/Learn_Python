@@ -619,7 +619,7 @@ class _Pickler:
                     "persistent IDs in protocol 0 must be ASCII strings")
 
     def save_reduce(self, func, args, state=None, listitems=None,
-                    dictitems=None, state_setter=None, obj=None):
+                    dictitems=None, state_setter=None, *, obj=None):
         # This API is called by some subclasses
 
         if not isinstance(args, tuple):
@@ -861,13 +861,13 @@ class _Pickler:
             else:
                 self.write(BINUNICODE + pack("<I", n) + encoded)
         else:
-            obj = obj.replace("\\", "\\u005c")
-            obj = obj.replace("\0", "\\u0000")
-            obj = obj.replace("\n", "\\u000a")
-            obj = obj.replace("\r", "\\u000d")
-            obj = obj.replace("\x1a", "\\u001a")  # EOF on DOS
-            self.write(UNICODE + obj.encode('raw-unicode-escape') +
-                       b'\n')
+            # Escape what raw-unicode-escape doesn't, but memoize the original.
+            tmp = obj.replace("\\", "\\u005c")
+            tmp = tmp.replace("\0", "\\u0000")
+            tmp = tmp.replace("\n", "\\u000a")
+            tmp = tmp.replace("\r", "\\u000d")
+            tmp = tmp.replace("\x1a", "\\u001a")  # EOF on DOS
+            self.write(UNICODE + tmp.encode('raw-unicode-escape') + b'\n')
         self.memoize(obj)
     dispatch[str] = save_str
 
@@ -1173,7 +1173,7 @@ class _Unpickler:
         used in Python 3.  The *encoding* and *errors* tell pickle how
         to decode 8-bit string instances pickled by Python 2; these
         default to 'ASCII' and 'strict', respectively. *encoding* can be
-        'bytes' to read theses 8-bit string instances as bytes objects.
+        'bytes' to read these 8-bit string instances as bytes objects.
         """
         self._buffers = iter(buffers) if buffers is not None else None
         self._file_readline = file.readline
@@ -1799,7 +1799,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description='display contents of the pickle files')
     parser.add_argument(
-        'pickle_file', type=argparse.FileType('br'),
+        'pickle_file',
         nargs='*', help='the pickle file')
     parser.add_argument(
         '-t', '--test', action='store_true',
@@ -1815,6 +1815,10 @@ if __name__ == "__main__":
             parser.print_help()
         else:
             import pprint
-            for f in args.pickle_file:
-                obj = load(f)
+            for fn in args.pickle_file:
+                if fn == '-':
+                    obj = load(sys.stdin.buffer)
+                else:
+                    with open(fn, 'rb') as f:
+                        obj = load(f)
                 pprint.pprint(obj)

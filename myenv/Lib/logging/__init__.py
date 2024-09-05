@@ -25,6 +25,7 @@ To use, simply 'import logging' and log away!
 
 import sys, os, time, io, re, traceback, warnings, weakref, collections.abc
 
+from types import GenericAlias
 from string import Template
 from string import Formatter as StrFormatter
 
@@ -37,7 +38,7 @@ __all__ = ['BASIC_FORMAT', 'BufferingFormatter', 'CRITICAL', 'DEBUG', 'ERROR',
            'exception', 'fatal', 'getLevelName', 'getLogger', 'getLoggerClass',
            'info', 'log', 'makeLogRecord', 'setLoggerClass', 'shutdown',
            'warn', 'warning', 'getLogRecordFactory', 'setLogRecordFactory',
-           'lastResort', 'raiseExceptions']
+           'lastResort', 'raiseExceptions', 'getLevelNamesMapping']
 
 import threading
 
@@ -116,6 +117,9 @@ _nameToLevel = {
     'NOTSET': NOTSET,
 }
 
+def getLevelNamesMapping():
+    return _nameToLevel.copy()
+
 def getLevelName(level):
     """
     Return the textual or numeric representation of logging level 'level'.
@@ -156,8 +160,8 @@ def addLevelName(level, levelName):
     finally:
         _releaseLock()
 
-if hasattr(sys, '_getframe'):
-    currentframe = lambda: sys._getframe(3)
+if hasattr(sys, "_getframe"):
+    currentframe = lambda: sys._getframe(1)
 else: #pragma: no cover
     def currentframe():
         """Return the frame object for the caller's stack frame."""
@@ -181,13 +185,18 @@ else: #pragma: no cover
 _srcfile = os.path.normcase(addLevelName.__code__.co_filename)
 
 # _srcfile is only used in conjunction with sys._getframe().
-# To provide compatibility with older versions of Python, set _srcfile
-# to None if _getframe() is not available; this value will prevent
-# findCaller() from being called. You can also do this if you want to avoid
-# the overhead of fetching caller information, even when _getframe() is
-# available.
-#if not hasattr(sys, '_getframe'):
-#    _srcfile = None
+# Setting _srcfile to None will prevent findCaller() from being called. This
+# way, you can avoid the overhead of fetching caller information.
+
+# The following is based on warnings._is_internal_frame. It makes sure that
+# frames of the import mechanism are skipped when logging at module level and
+# using a stacklevel value greater than one.
+def _is_internal_frame(frame):
+    """Signal whether the frame is a CPython or logging module internal."""
+    filename = os.path.normcase(frame.f_code.co_filename)
+    return filename == _srcfile or (
+        "importlib" in filename and "_bootstrap" in filename
+    )
 
 
 def _checkLevel(level):
@@ -325,7 +334,7 @@ class LogRecord(object):
         self.lineno = lineno
         self.funcName = func
         self.created = ct
-        self.msecs = (ct - int(ct)) * 1000
+        self.msecs = int((ct - int(ct)) * 1000) + 0.0  # see gh-89047
         self.relativeCreated = (self.created - _startTime) * 1000
         if logThreads:
             self.thread = threading.get_ident()
@@ -487,7 +496,7 @@ class StringTemplateStyle(PercentStyle):
 
     def usesTime(self):
         fmt = self._fmt
-        return fmt.find('$asctime') >= 0 or fmt.find(self.asctime_format) >= 0
+        return fmt.find('$asctime') >= 0 or fmt.find(self.asctime_search) >= 0
 
     def validate(self):
         pattern = Template.pattern
@@ -845,8 +854,9 @@ def _removeHandlerRef(wr):
     if acquire and release and handlers:
         acquire()
         try:
-            if wr in handlers:
-                handlers.remove(wr)
+            handlers.remove(wr)
+        except ValueError:
+            pass
         finally:
             release()
 
@@ -878,6 +888,7 @@ class Handler(Filterer):
         self._name = None
         self.level = _checkLevel(level)
         self.formatter = None
+        self._closed = False
         # Add the handler to the global _handlerList (for cleanup on shutdown)
         _addHandlerRef(self)
         self.createLock()
@@ -996,6 +1007,7 @@ class Handler(Filterer):
         #get the module data lock, as we're updating a shared structure.
         _acquireLock()
         try:    #unlikely to raise an exception, but you never know...
+            self._closed = True
             if self._name and self._name in _handlers:
                 del _handlers[self._name]
         finally:
@@ -1134,6 +1146,8 @@ class StreamHandler(Handler):
             name += ' '
         return '<%s %s(%s)>' % (self.__class__.__name__, name, level)
 
+    __class_getitem__ = classmethod(GenericAlias)
+
 
 class FileHandler(StreamHandler):
     """
@@ -1184,6 +1198,8 @@ class FileHandler(StreamHandler):
             finally:
                 # Issue #19523: call unconditionally to
                 # prevent a handler leak when delay is set
+                # Also see Issue #42378: we also rely on
+                # self._closed being set to True there
                 StreamHandler.close(self)
         finally:
             self.release()
@@ -1203,10 +1219,15 @@ class FileHandler(StreamHandler):
 
         If the stream was not opened because 'delay' was specified in the
         constructor, open it before calling the superclass's emit.
+
+        If stream is not open, current mode is 'w' and `_closed=True`, record
+        will not be emitted (see Issue #42378).
         """
         if self.stream is None:
-            self.stream = self._open()
-        StreamHandler.emit(self, record)
+            if self.mode != 'w' or not self._closed:
+                self.stream = self._open()
+        if self.stream:
+            StreamHandler.emit(self, record)
 
     def __repr__(self):
         level = getLevelName(self.level)
@@ -1450,7 +1471,7 @@ class Logger(Filterer):
         To pass exception information, use the keyword argument exc_info with
         a true value, e.g.
 
-        logger.debug("Houston, we have a %s", "thorny problem", exc_info=1)
+        logger.debug("Houston, we have a %s", "thorny problem", exc_info=True)
         """
         if self.isEnabledFor(DEBUG):
             self._log(DEBUG, msg, args, **kwargs)
@@ -1462,7 +1483,7 @@ class Logger(Filterer):
         To pass exception information, use the keyword argument exc_info with
         a true value, e.g.
 
-        logger.info("Houston, we have a %s", "interesting problem", exc_info=1)
+        logger.info("Houston, we have a %s", "interesting problem", exc_info=True)
         """
         if self.isEnabledFor(INFO):
             self._log(INFO, msg, args, **kwargs)
@@ -1474,7 +1495,7 @@ class Logger(Filterer):
         To pass exception information, use the keyword argument exc_info with
         a true value, e.g.
 
-        logger.warning("Houston, we have a %s", "bit of a problem", exc_info=1)
+        logger.warning("Houston, we have a %s", "bit of a problem", exc_info=True)
         """
         if self.isEnabledFor(WARNING):
             self._log(WARNING, msg, args, **kwargs)
@@ -1491,7 +1512,7 @@ class Logger(Filterer):
         To pass exception information, use the keyword argument exc_info with
         a true value, e.g.
 
-        logger.error("Houston, we have a %s", "major problem", exc_info=1)
+        logger.error("Houston, we have a %s", "major problem", exc_info=True)
         """
         if self.isEnabledFor(ERROR):
             self._log(ERROR, msg, args, **kwargs)
@@ -1509,7 +1530,7 @@ class Logger(Filterer):
         To pass exception information, use the keyword argument exc_info with
         a true value, e.g.
 
-        logger.critical("Houston, we have a %s", "major disaster", exc_info=1)
+        logger.critical("Houston, we have a %s", "major disaster", exc_info=True)
         """
         if self.isEnabledFor(CRITICAL):
             self._log(CRITICAL, msg, args, **kwargs)
@@ -1527,7 +1548,7 @@ class Logger(Filterer):
         To pass exception information, use the keyword argument exc_info with
         a true value, e.g.
 
-        logger.log(level, "We have a %s", "mysterious problem", exc_info=1)
+        logger.log(level, "We have a %s", "mysterious problem", exc_info=True)
         """
         if not isinstance(level, int):
             if raiseExceptions:
@@ -1545,33 +1566,31 @@ class Logger(Filterer):
         f = currentframe()
         #On some versions of IronPython, currentframe() returns None if
         #IronPython isn't run with -X:Frames.
-        if f is not None:
-            f = f.f_back
-        orig_f = f
-        while f and stacklevel > 1:
-            f = f.f_back
-            stacklevel -= 1
-        if not f:
-            f = orig_f
-        rv = "(unknown file)", 0, "(unknown function)", None
-        while hasattr(f, "f_code"):
-            co = f.f_code
-            filename = os.path.normcase(co.co_filename)
-            if filename == _srcfile:
-                f = f.f_back
-                continue
-            sinfo = None
-            if stack_info:
-                sio = io.StringIO()
-                sio.write('Stack (most recent call last):\n')
+        if f is None:
+            return "(unknown file)", 0, "(unknown function)", None
+        while stacklevel > 0:
+            next_f = f.f_back
+            if next_f is None:
+                ## We've got options here.
+                ## If we want to use the last (deepest) frame:
+                break
+                ## If we want to mimic the warnings module:
+                #return ("sys", 1, "(unknown function)", None)
+                ## If we want to be pedantic:
+                #raise ValueError("call stack is not deep enough")
+            f = next_f
+            if not _is_internal_frame(f):
+                stacklevel -= 1
+        co = f.f_code
+        sinfo = None
+        if stack_info:
+            with io.StringIO() as sio:
+                sio.write("Stack (most recent call last):\n")
                 traceback.print_stack(f, file=sio)
                 sinfo = sio.getvalue()
                 if sinfo[-1] == '\n':
                     sinfo = sinfo[:-1]
-                sio.close()
-            rv = (co.co_filename, f.f_lineno, co.co_name, sinfo)
-            break
-        return rv
+        return co.co_filename, f.f_lineno, co.co_name, sinfo
 
     def makeRecord(self, name, level, fn, lno, msg, args, exc_info,
                    func=None, extra=None, sinfo=None):
@@ -1758,8 +1777,6 @@ class Logger(Filterer):
         return '<%s %s (%s)>' % (self.__class__.__name__, self.name, level)
 
     def __reduce__(self):
-        # In general, only the root logger will not be accessible via its name.
-        # However, the root logger's class has its own __reduce__ method.
         if getLogger(self.name) is not self:
             import pickle
             raise pickle.PicklingError('logger cannot be pickled')
@@ -1893,18 +1910,11 @@ class LoggerAdapter(object):
         """
         return self.logger.hasHandlers()
 
-    def _log(self, level, msg, args, exc_info=None, extra=None, stack_info=False):
+    def _log(self, level, msg, args, **kwargs):
         """
         Low-level log implementation, proxied to allow nested logger adapters.
         """
-        return self.logger._log(
-            level,
-            msg,
-            args,
-            exc_info=exc_info,
-            extra=extra,
-            stack_info=stack_info,
-        )
+        return self.logger._log(level, msg, args, **kwargs)
 
     @property
     def manager(self):
@@ -1922,6 +1932,8 @@ class LoggerAdapter(object):
         logger = self.logger
         level = getLevelName(logger.getEffectiveLevel())
         return '<%s %s (%s)>' % (self.__class__.__name__, logger.name, level)
+
+    __class_getitem__ = classmethod(GenericAlias)
 
 root = RootLogger(WARNING)
 Logger.root = root
@@ -1962,7 +1974,7 @@ def basicConfig(**kwargs):
               that this argument is incompatible with 'filename' - if both
               are present, 'stream' is ignored.
     handlers  If specified, this should be an iterable of already created
-              handlers, which will be added to the root handler. Any handler
+              handlers, which will be added to the root logger. Any handler
               in the list which does not have a formatter assigned will be
               assigned the formatter created in this function.
     force     If this keyword  is specified as true, any existing handlers
@@ -2233,7 +2245,9 @@ def _showwarning(message, category, filename, lineno, file=None, line=None):
         logger = getLogger("py.warnings")
         if not logger.handlers:
             logger.addHandler(NullHandler())
-        logger.warning("%s", s)
+        # bpo-46557: Log str(s) as msg instead of logger.warning("%s", s)
+        # since some log aggregation tools group logs by the msg arg
+        logger.warning(str(s))
 
 def captureWarnings(capture):
     """

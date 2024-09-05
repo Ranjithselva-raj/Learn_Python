@@ -26,13 +26,13 @@
     "Lib/site-packages/asttokens/util.py",
     "Lib/site-packages/asttokens/version.py",
     ".nonadmin",
-    "Lib/site-packages/asttokens/__pycache__/__init__.cpython-310.pyc",
-    "Lib/site-packages/asttokens/__pycache__/astroid_compat.cpython-310.pyc",
-    "Lib/site-packages/asttokens/__pycache__/asttokens.cpython-310.pyc",
-    "Lib/site-packages/asttokens/__pycache__/line_numbers.cpython-310.pyc",
-    "Lib/site-packages/asttokens/__pycache__/mark_tokens.cpython-310.pyc",
-    "Lib/site-packages/asttokens/__pycache__/util.cpython-310.pyc",
-    "Lib/site-packages/asttokens/__pycache__/version.cpython-310.pyc"
+    "Lib/site-packages/asttokens/__pycache__/__init__.cpython-311.pyc",
+    "Lib/site-packages/asttokens/__pycache__/astroid_compat.cpython-311.pyc",
+    "Lib/site-packages/asttokens/__pycache__/asttokens.cpython-311.pyc",
+    "Lib/site-packages/asttokens/__pycache__/line_numbers.cpython-311.pyc",
+    "Lib/site-packages/asttokens/__pycache__/mark_tokens.cpython-311.pyc",
+    "Lib/site-packages/asttokens/__pycache__/util.cpython-311.pyc",
+    "Lib/site-packages/asttokens/__pycache__/version.cpython-311.pyc"
   ],
   "fn": "asttokens-2.4.1-pyhd8ed1ab_0.conda",
   "license": "Apache-2.0",
@@ -161,31 +161,31 @@
         "size_in_bytes": 22
       },
       {
-        "_path": "Lib/site-packages/asttokens/__pycache__/__init__.cpython-310.pyc",
+        "_path": "Lib/site-packages/asttokens/__pycache__/__init__.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/asttokens/__pycache__/astroid_compat.cpython-310.pyc",
+        "_path": "Lib/site-packages/asttokens/__pycache__/astroid_compat.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/asttokens/__pycache__/asttokens.cpython-310.pyc",
+        "_path": "Lib/site-packages/asttokens/__pycache__/asttokens.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/asttokens/__pycache__/line_numbers.cpython-310.pyc",
+        "_path": "Lib/site-packages/asttokens/__pycache__/line_numbers.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/asttokens/__pycache__/mark_tokens.cpython-310.pyc",
+        "_path": "Lib/site-packages/asttokens/__pycache__/mark_tokens.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/asttokens/__pycache__/util.cpython-310.pyc",
+        "_path": "Lib/site-packages/asttokens/__pycache__/util.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/asttokens/__pycache__/version.cpython-310.pyc",
+        "_path": "Lib/site-packages/asttokens/__pycache__/version.cpython-311.pyc",
         "path_type": "pyc_file"
       }
     ],

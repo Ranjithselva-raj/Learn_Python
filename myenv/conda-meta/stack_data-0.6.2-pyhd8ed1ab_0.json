@@ -27,12 +27,12 @@
     "Lib/site-packages/stack_data/utils.py",
     "Lib/site-packages/stack_data/version.py",
     ".nonadmin",
-    "Lib/site-packages/stack_data/__pycache__/__init__.cpython-310.pyc",
-    "Lib/site-packages/stack_data/__pycache__/core.cpython-310.pyc",
-    "Lib/site-packages/stack_data/__pycache__/formatting.cpython-310.pyc",
-    "Lib/site-packages/stack_data/__pycache__/serializing.cpython-310.pyc",
-    "Lib/site-packages/stack_data/__pycache__/utils.cpython-310.pyc",
-    "Lib/site-packages/stack_data/__pycache__/version.cpython-310.pyc"
+    "Lib/site-packages/stack_data/__pycache__/__init__.cpython-311.pyc",
+    "Lib/site-packages/stack_data/__pycache__/core.cpython-311.pyc",
+    "Lib/site-packages/stack_data/__pycache__/formatting.cpython-311.pyc",
+    "Lib/site-packages/stack_data/__pycache__/serializing.cpython-311.pyc",
+    "Lib/site-packages/stack_data/__pycache__/utils.cpython-311.pyc",
+    "Lib/site-packages/stack_data/__pycache__/version.cpython-311.pyc"
   ],
   "fn": "stack_data-0.6.2-pyhd8ed1ab_0.conda",
   "license": "MIT",
@@ -154,27 +154,27 @@
         "size_in_bytes": 22
       },
       {
-        "_path": "Lib/site-packages/stack_data/__pycache__/__init__.cpython-310.pyc",
+        "_path": "Lib/site-packages/stack_data/__pycache__/__init__.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/stack_data/__pycache__/core.cpython-310.pyc",
+        "_path": "Lib/site-packages/stack_data/__pycache__/core.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/stack_data/__pycache__/formatting.cpython-310.pyc",
+        "_path": "Lib/site-packages/stack_data/__pycache__/formatting.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/stack_data/__pycache__/serializing.cpython-310.pyc",
+        "_path": "Lib/site-packages/stack_data/__pycache__/serializing.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/stack_data/__pycache__/utils.cpython-310.pyc",
+        "_path": "Lib/site-packages/stack_data/__pycache__/utils.cpython-311.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/stack_data/__pycache__/version.cpython-310.pyc",
+        "_path": "Lib/site-packages/stack_data/__pycache__/version.cpython-311.pyc",
         "path_type": "pyc_file"
       }
     ],

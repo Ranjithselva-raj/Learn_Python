@@ -50,7 +50,8 @@ def pprint(object, stream=None, indent=1, width=80, depth=None, *,
     """Pretty-print a Python object to a stream [default is sys.stdout]."""
     printer = PrettyPrinter(
         stream=stream, indent=indent, width=width, depth=depth,
-        compact=compact, sort_dicts=sort_dicts, underscore_numbers=False)
+        compact=compact, sort_dicts=sort_dicts,
+        underscore_numbers=underscore_numbers)
     printer.pprint(object)
 
 def pformat(object, indent=1, width=80, depth=None, *,
@@ -127,6 +128,9 @@ class PrettyPrinter:
         sort_dicts
             If true, dict keys are sorted.
 
+        underscore_numbers
+            If true, digit groups are separated with underscores.
+
         """
         indent = int(indent)
         width = int(width)
@@ -148,8 +152,9 @@ class PrettyPrinter:
         self._underscore_numbers = underscore_numbers
 
     def pprint(self, object):
-        self._format(object, self._stream, 0, 0, {}, 0)
-        self._stream.write("\n")
+        if self._stream is not None:
+            self._format(object, self._stream, 0, 0, {}, 0)
+            self._stream.write("\n")
 
     def pformat(self, object):
         sio = _StringIO()
