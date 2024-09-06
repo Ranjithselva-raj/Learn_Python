@@ -11,15 +11,9 @@ except ImportError:
           "Your Python may not be configured for Tk. **", file=sys.__stderr__)
     raise SystemExit(1)
 
-# Valid arguments for the ...Awareness call below are defined in the following.
-# https://msdn.microsoft.com/en-us/library/windows/desktop/dn280512(v=vs.85).aspx
 if sys.platform == 'win32':
-    try:
-        import ctypes
-        PROCESS_SYSTEM_DPI_AWARE = 1  # Int required.
-        ctypes.OleDLL('shcore').SetProcessDpiAwareness(PROCESS_SYSTEM_DPI_AWARE)
-    except (ImportError, AttributeError, OSError):
-        pass
+    from idlelib.util import fix_win_hidpi
+    fix_win_hidpi()
 
 from tkinter import messagebox
 
@@ -1370,11 +1364,11 @@ class PyShell(OutputWindow):
 
         from idlelib.stackviewer import StackBrowser
         try:
-            StackBrowser(self.root, sys.last_value, self.flist)
+            StackBrowser(self.root, sys.last_exc, self.flist)
         except:
             messagebox.showerror("No stack trace",
                 "There is no stack trace yet.\n"
-                "(sys.last_value is not defined)",
+                "(sys.last_exc is not defined)",
                 parent=self.text)
         return None
 

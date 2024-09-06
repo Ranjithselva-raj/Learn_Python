@@ -23,12 +23,12 @@
     "Lib/site-packages/exceptiongroup/_version.py",
     "Lib/site-packages/exceptiongroup/py.typed",
     ".nonadmin",
-    "Lib/site-packages/exceptiongroup/__pycache__/__init__.cpython-311.pyc",
-    "Lib/site-packages/exceptiongroup/__pycache__/_catch.cpython-311.pyc",
-    "Lib/site-packages/exceptiongroup/__pycache__/_exceptions.cpython-311.pyc",
-    "Lib/site-packages/exceptiongroup/__pycache__/_formatting.cpython-311.pyc",
-    "Lib/site-packages/exceptiongroup/__pycache__/_suppress.cpython-311.pyc",
-    "Lib/site-packages/exceptiongroup/__pycache__/_version.cpython-311.pyc"
+    "Lib/site-packages/exceptiongroup/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/exceptiongroup/__pycache__/_catch.cpython-312.pyc",
+    "Lib/site-packages/exceptiongroup/__pycache__/_exceptions.cpython-312.pyc",
+    "Lib/site-packages/exceptiongroup/__pycache__/_formatting.cpython-312.pyc",
+    "Lib/site-packages/exceptiongroup/__pycache__/_suppress.cpython-312.pyc",
+    "Lib/site-packages/exceptiongroup/__pycache__/_version.cpython-312.pyc"
   ],
   "fn": "exceptiongroup-1.2.2-pyhd8ed1ab_0.conda",
   "license": "MIT and PSF-2.0",
@@ -142,27 +142,27 @@
         "size_in_bytes": 0
       },
       {
-        "_path": "Lib/site-packages/exceptiongroup/__pycache__/__init__.cpython-311.pyc",
+        "_path": "Lib/site-packages/exceptiongroup/__pycache__/__init__.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/exceptiongroup/__pycache__/_catch.cpython-311.pyc",
+        "_path": "Lib/site-packages/exceptiongroup/__pycache__/_catch.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/exceptiongroup/__pycache__/_exceptions.cpython-311.pyc",
+        "_path": "Lib/site-packages/exceptiongroup/__pycache__/_exceptions.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/exceptiongroup/__pycache__/_formatting.cpython-311.pyc",
+        "_path": "Lib/site-packages/exceptiongroup/__pycache__/_formatting.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/exceptiongroup/__pycache__/_suppress.cpython-311.pyc",
+        "_path": "Lib/site-packages/exceptiongroup/__pycache__/_suppress.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/exceptiongroup/__pycache__/_version.cpython-311.pyc",
+        "_path": "Lib/site-packages/exceptiongroup/__pycache__/_version.cpython-312.pyc",
         "path_type": "pyc_file"
       }
     ],

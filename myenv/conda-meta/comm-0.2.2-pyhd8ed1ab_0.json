@@ -20,8 +20,8 @@
     "Lib/site-packages/comm/base_comm.py",
     "Lib/site-packages/comm/py.typed",
     ".nonadmin",
-    "Lib/site-packages/comm/__pycache__/__init__.cpython-311.pyc",
-    "Lib/site-packages/comm/__pycache__/base_comm.cpython-311.pyc"
+    "Lib/site-packages/comm/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/comm/__pycache__/base_comm.cpython-312.pyc"
   ],
   "fn": "comm-0.2.2-pyhd8ed1ab_0.conda",
   "license": "BSD-3-Clause",
@@ -108,11 +108,11 @@
         "size_in_bytes": 0
       },
       {
-        "_path": "Lib/site-packages/comm/__pycache__/__init__.cpython-311.pyc",
+        "_path": "Lib/site-packages/comm/__pycache__/__init__.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/comm/__pycache__/base_comm.cpython-311.pyc",
+        "_path": "Lib/site-packages/comm/__pycache__/base_comm.cpython-312.pyc",
         "path_type": "pyc_file"
       }
     ],

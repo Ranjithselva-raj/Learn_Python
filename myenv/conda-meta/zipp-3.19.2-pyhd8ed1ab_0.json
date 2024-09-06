@@ -21,10 +21,10 @@
     "Lib/site-packages/zipp/compat/py310.py",
     "Lib/site-packages/zipp/glob.py",
     ".nonadmin",
-    "Lib/site-packages/zipp/__pycache__/__init__.cpython-311.pyc",
-    "Lib/site-packages/zipp/compat/__pycache__/__init__.cpython-311.pyc",
-    "Lib/site-packages/zipp/compat/__pycache__/py310.cpython-311.pyc",
-    "Lib/site-packages/zipp/__pycache__/glob.cpython-311.pyc"
+    "Lib/site-packages/zipp/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/zipp/compat/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/zipp/compat/__pycache__/py310.cpython-312.pyc",
+    "Lib/site-packages/zipp/__pycache__/glob.cpython-312.pyc"
   ],
   "fn": "zipp-3.19.2-pyhd8ed1ab_0.conda",
   "license": "MIT",
@@ -125,19 +125,19 @@
         "size_in_bytes": 3082
       },
       {
-        "_path": "Lib/site-packages/zipp/__pycache__/__init__.cpython-311.pyc",
+        "_path": "Lib/site-packages/zipp/__pycache__/__init__.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/zipp/compat/__pycache__/__init__.cpython-311.pyc",
+        "_path": "Lib/site-packages/zipp/compat/__pycache__/__init__.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/zipp/compat/__pycache__/py310.cpython-311.pyc",
+        "_path": "Lib/site-packages/zipp/compat/__pycache__/py310.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/zipp/__pycache__/glob.cpython-311.pyc",
+        "_path": "Lib/site-packages/zipp/__pycache__/glob.cpython-312.pyc",
         "path_type": "pyc_file"
       }
     ],

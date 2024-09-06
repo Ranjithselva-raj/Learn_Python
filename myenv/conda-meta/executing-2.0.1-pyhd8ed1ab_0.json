@@ -23,11 +23,11 @@
     "Lib/site-packages/executing/py.typed",
     "Lib/site-packages/executing/version.py",
     ".nonadmin",
-    "Lib/site-packages/executing/__pycache__/__init__.cpython-311.pyc",
-    "Lib/site-packages/executing/__pycache__/_exceptions.cpython-311.pyc",
-    "Lib/site-packages/executing/__pycache__/_position_node_finder.cpython-311.pyc",
-    "Lib/site-packages/executing/__pycache__/executing.cpython-311.pyc",
-    "Lib/site-packages/executing/__pycache__/version.cpython-311.pyc"
+    "Lib/site-packages/executing/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/executing/__pycache__/_exceptions.cpython-312.pyc",
+    "Lib/site-packages/executing/__pycache__/_position_node_finder.cpython-312.pyc",
+    "Lib/site-packages/executing/__pycache__/executing.cpython-312.pyc",
+    "Lib/site-packages/executing/__pycache__/version.cpython-312.pyc"
   ],
   "fn": "executing-2.0.1-pyhd8ed1ab_0.conda",
   "license": "MIT",
@@ -142,23 +142,23 @@
         "size_in_bytes": 21
       },
       {
-        "_path": "Lib/site-packages/executing/__pycache__/__init__.cpython-311.pyc",
+        "_path": "Lib/site-packages/executing/__pycache__/__init__.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/executing/__pycache__/_exceptions.cpython-311.pyc",
+        "_path": "Lib/site-packages/executing/__pycache__/_exceptions.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/executing/__pycache__/_position_node_finder.cpython-311.pyc",
+        "_path": "Lib/site-packages/executing/__pycache__/_position_node_finder.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/executing/__pycache__/executing.cpython-311.pyc",
+        "_path": "Lib/site-packages/executing/__pycache__/executing.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/executing/__pycache__/version.cpython-311.pyc",
+        "_path": "Lib/site-packages/executing/__pycache__/version.cpython-312.pyc",
         "path_type": "pyc_file"
       }
     ],

@@ -18,7 +18,7 @@
     "Lib/site-packages/pickleshare-0.7.5.dist-info/top_level.txt",
     "Lib/site-packages/pickleshare.py",
     ".nonadmin",
-    "Lib/site-packages/__pycache__/pickleshare.cpython-311.pyc"
+    "Lib/site-packages/__pycache__/pickleshare.cpython-312.pyc"
   ],
   "fn": "pickleshare-0.7.5-py_1003.tar.bz2",
   "license": "MIT",
@@ -98,7 +98,7 @@
         "size_in_bytes": 9942
       },
       {
-        "_path": "Lib/site-packages/__pycache__/pickleshare.cpython-311.pyc",
+        "_path": "Lib/site-packages/__pycache__/pickleshare.cpython-312.pyc",
         "path_type": "pyc_file"
       }
     ],

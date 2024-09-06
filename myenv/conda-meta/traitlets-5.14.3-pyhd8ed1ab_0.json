@@ -41,30 +41,30 @@
     "Lib/site-packages/traitlets/utils/text.py",
     "Lib/site-packages/traitlets/utils/warnings.py",
     ".nonadmin",
-    "Lib/site-packages/traitlets/__pycache__/__init__.cpython-311.pyc",
-    "Lib/site-packages/traitlets/__pycache__/_version.cpython-311.pyc",
-    "Lib/site-packages/traitlets/config/__pycache__/__init__.cpython-311.pyc",
-    "Lib/site-packages/traitlets/config/__pycache__/application.cpython-311.pyc",
-    "Lib/site-packages/traitlets/config/__pycache__/argcomplete_config.cpython-311.pyc",
-    "Lib/site-packages/traitlets/config/__pycache__/configurable.cpython-311.pyc",
-    "Lib/site-packages/traitlets/config/__pycache__/loader.cpython-311.pyc",
-    "Lib/site-packages/traitlets/config/__pycache__/manager.cpython-311.pyc",
-    "Lib/site-packages/traitlets/config/__pycache__/sphinxdoc.cpython-311.pyc",
-    "Lib/site-packages/traitlets/__pycache__/log.cpython-311.pyc",
-    "Lib/site-packages/traitlets/tests/__pycache__/__init__.cpython-311.pyc",
-    "Lib/site-packages/traitlets/tests/__pycache__/test_traitlets.cpython-311.pyc",
-    "Lib/site-packages/traitlets/tests/__pycache__/utils.cpython-311.pyc",
-    "Lib/site-packages/traitlets/__pycache__/traitlets.cpython-311.pyc",
-    "Lib/site-packages/traitlets/utils/__pycache__/__init__.cpython-311.pyc",
-    "Lib/site-packages/traitlets/utils/__pycache__/bunch.cpython-311.pyc",
-    "Lib/site-packages/traitlets/utils/__pycache__/decorators.cpython-311.pyc",
-    "Lib/site-packages/traitlets/utils/__pycache__/descriptions.cpython-311.pyc",
-    "Lib/site-packages/traitlets/utils/__pycache__/getargspec.cpython-311.pyc",
-    "Lib/site-packages/traitlets/utils/__pycache__/importstring.cpython-311.pyc",
-    "Lib/site-packages/traitlets/utils/__pycache__/nested_update.cpython-311.pyc",
-    "Lib/site-packages/traitlets/utils/__pycache__/sentinel.cpython-311.pyc",
-    "Lib/site-packages/traitlets/utils/__pycache__/text.cpython-311.pyc",
-    "Lib/site-packages/traitlets/utils/__pycache__/warnings.cpython-311.pyc"
+    "Lib/site-packages/traitlets/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/traitlets/__pycache__/_version.cpython-312.pyc",
+    "Lib/site-packages/traitlets/config/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/traitlets/config/__pycache__/application.cpython-312.pyc",
+    "Lib/site-packages/traitlets/config/__pycache__/argcomplete_config.cpython-312.pyc",
+    "Lib/site-packages/traitlets/config/__pycache__/configurable.cpython-312.pyc",
+    "Lib/site-packages/traitlets/config/__pycache__/loader.cpython-312.pyc",
+    "Lib/site-packages/traitlets/config/__pycache__/manager.cpython-312.pyc",
+    "Lib/site-packages/traitlets/config/__pycache__/sphinxdoc.cpython-312.pyc",
+    "Lib/site-packages/traitlets/__pycache__/log.cpython-312.pyc",
+    "Lib/site-packages/traitlets/tests/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/traitlets/tests/__pycache__/test_traitlets.cpython-312.pyc",
+    "Lib/site-packages/traitlets/tests/__pycache__/utils.cpython-312.pyc",
+    "Lib/site-packages/traitlets/__pycache__/traitlets.cpython-312.pyc",
+    "Lib/site-packages/traitlets/utils/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/traitlets/utils/__pycache__/bunch.cpython-312.pyc",
+    "Lib/site-packages/traitlets/utils/__pycache__/decorators.cpython-312.pyc",
+    "Lib/site-packages/traitlets/utils/__pycache__/descriptions.cpython-312.pyc",
+    "Lib/site-packages/traitlets/utils/__pycache__/getargspec.cpython-312.pyc",
+    "Lib/site-packages/traitlets/utils/__pycache__/importstring.cpython-312.pyc",
+    "Lib/site-packages/traitlets/utils/__pycache__/nested_update.cpython-312.pyc",
+    "Lib/site-packages/traitlets/utils/__pycache__/sentinel.cpython-312.pyc",
+    "Lib/site-packages/traitlets/utils/__pycache__/text.cpython-312.pyc",
+    "Lib/site-packages/traitlets/utils/__pycache__/warnings.cpython-312.pyc"
   ],
   "fn": "traitlets-5.14.3-pyhd8ed1ab_0.conda",
   "license": "BSD-3-Clause",
@@ -305,99 +305,99 @@
         "size_in_bytes": 1964
       },
       {
-        "_path": "Lib/site-packages/traitlets/__pycache__/__init__.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/__pycache__/__init__.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/__pycache__/_version.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/__pycache__/_version.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/config/__pycache__/__init__.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/config/__pycache__/__init__.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/config/__pycache__/application.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/config/__pycache__/application.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/config/__pycache__/argcomplete_config.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/config/__pycache__/argcomplete_config.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/config/__pycache__/configurable.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/config/__pycache__/configurable.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/config/__pycache__/loader.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/config/__pycache__/loader.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/config/__pycache__/manager.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/config/__pycache__/manager.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/config/__pycache__/sphinxdoc.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/config/__pycache__/sphinxdoc.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/__pycache__/log.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/__pycache__/log.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/tests/__pycache__/__init__.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/tests/__pycache__/__init__.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/tests/__pycache__/test_traitlets.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/tests/__pycache__/test_traitlets.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/tests/__pycache__/utils.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/tests/__pycache__/utils.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/__pycache__/traitlets.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/__pycache__/traitlets.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/utils/__pycache__/__init__.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/utils/__pycache__/__init__.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/utils/__pycache__/bunch.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/utils/__pycache__/bunch.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/utils/__pycache__/decorators.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/utils/__pycache__/decorators.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/utils/__pycache__/descriptions.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/utils/__pycache__/descriptions.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/utils/__pycache__/getargspec.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/utils/__pycache__/getargspec.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/utils/__pycache__/importstring.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/utils/__pycache__/importstring.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/utils/__pycache__/nested_update.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/utils/__pycache__/nested_update.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/utils/__pycache__/sentinel.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/utils/__pycache__/sentinel.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/utils/__pycache__/text.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/utils/__pycache__/text.cpython-312.pyc",
         "path_type": "pyc_file"
       },
       {
-        "_path": "Lib/site-packages/traitlets/utils/__pycache__/warnings.cpython-311.pyc",
+        "_path": "Lib/site-packages/traitlets/utils/__pycache__/warnings.cpython-312.pyc",
         "path_type": "pyc_file"
       }
     ],

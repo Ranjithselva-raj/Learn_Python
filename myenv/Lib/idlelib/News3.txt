@@ -1,8 +1,10 @@
-What's New in IDLE 3.11.z
-(since 3.11.0)
-Released after 2022-10-24
+What's New in IDLE 3.12.z
+(since 3.12.0)
+Released after 2023-10-02
 =========================
 
+
+gh-78955: Use user-selected color theme for Help => IDLE Doc.
 
 gh-96905: In idlelib code, stop redefining built-ins 'dict' and 'object'.
 
@@ -23,6 +25,12 @@ gh-112939: Fix processing unsaved files when quitting IDLE on macOS.
 Patch by Ronald Oussoren and Christopher Chavez.
 
 gh-79871: Add docstrings to debugger.py.  Fix two bugs in test_debugger and expand coverage by 47%.  Patch by Anthony Shaw.
+
+
+What's New in IDLE 3.12.0
+(since 3.11.0)
+Released on 2023-10-02
+=========================
 
 gh-104719: Remove IDLE's modification of tokenize.tabsize and test
 other uses of tokenize data and methods.
